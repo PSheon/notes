@@ -11,26 +11,25 @@ const styles = {
     borderLeftColor: `omegaLighter`,
     pl: 5,
     py: 2,
-    my: 5
+    my: 5,
   },
   quote: {
     color: `omegaDark`,
-    fontWeight: `body`
+    fontWeight: `body`,
   },
   writer: {
     color: `omegaDark`,
-    mb: 0
-  }
+    mb: 0,
+  },
 }
 
 export default () => (
   <Box sx={styles.box}>
     <Heading variant='h3' sx={styles.quote}>
-      “While one person hesitates because he feels inferior, the other is busy
-      making mistakes and becoming superior.”
+      “紙上得來終覺淺，絕知此事要躬行”
     </Heading>
     <Heading variant='h4' sx={styles.writer}>
-      Henry C. Link
+      陸游 《冬夜讀書示子聿》
     </Heading>
   </Box>
 )
