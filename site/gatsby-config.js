@@ -1,6 +1,7 @@
 require('dotenv').config()
 
 module.exports = {
+  pathPrefix: '/notes',
   plugins: [
     {
       /* Google Analytics Settings */
