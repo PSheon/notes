@@ -89,8 +89,6 @@ const Navigation = ({
 
   const hasGroupedItems = Array.isArray(items[0].items)
 
-  console.log('items, ', items)
-
   return hasGroupedItems ? (
     items.map((node, i) => (
       <Fragment key={`nav-menu-${i}`}>

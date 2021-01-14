@@ -40,7 +40,7 @@ const useForm = () => {
     handleSubmit,
     submitting,
     submitted,
-    success
+    success,
   }
 }
 
