@@ -1,0 +1,7 @@
+{
+  "name": "機器學習",
+  "icon": "machine-learning.svg",
+  "color": "#e9d8fd",
+  "slug": "machine-learning",
+  "description": "你可以想成它是通往人工智慧的一種方法。機器學習的特色是：自動從資料當中學到規則，找到一個夠好的方式來解決特定問題。"
+}
