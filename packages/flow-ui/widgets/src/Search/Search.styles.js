@@ -3,7 +3,7 @@ export default {
     display: [focus ? `flex` : `none`, focus ? `flex` : `none`, `flex`],
     alignItems: `center`,
     bg: `omegaLight`,
-    borderRadius: `default`,
+    borderRadius: `full`,
     position: focus ? `absolute` : `static`,
     top: 4,
     left: `50%`,
@@ -14,16 +14,16 @@ export default {
     borderStyle: `solid`,
     borderColor: focus ? `omegaLight` : `headerBg`,
     borderWidth: `md`,
-    px: 3
+    px: 3,
   }),
   searchIcon: {
-    flexShrink: 0
+    flexShrink: 0,
   },
   mobileTrigger: {
-    display: [`block`, `block`, `none`]
+    display: [`block`, `block`, `none`],
   },
   input: {
-    ml: 1
+    ml: 1,
   },
   poweredBy: {
     position: [`fixed`, `static`],
@@ -37,12 +37,12 @@ export default {
     svg: {
       width: 60,
       height: 16,
-      verticalAlign: `middle`
-    }
+      verticalAlign: `middle`,
+    },
   },
   spinner: {
     display: `block`,
-    margin: `auto`
+    margin: `auto`,
   },
   hitsWrapper: {
     display: `block`,
@@ -66,16 +66,16 @@ export default {
     mt: 5,
     mark: {
       fontWeight: `bold`,
-      backgroundColor: `highlight`
-    }
+      backgroundColor: `highlight`,
+    },
   },
   hitGroup: {
     '+ div': {
       borderTopStyle: `solid`,
       borderTopColor: `omegaLight`,
       borderTopWidth: 1,
-      pt: 3
-    }
+      pt: 3,
+    },
   },
   overlay: {
     position: `fixed`,
@@ -85,7 +85,7 @@ export default {
     bg: `background`,
     opacity: 0.9,
     width: `full`,
-    height: `full`
+    height: `full`,
   },
   close: {
     position: `fixed`,
@@ -95,9 +95,9 @@ export default {
     transform: [`translate(50%, -50%)`, `none`],
     textAlign: `center`,
     color: `omega`,
-    fontSize: 1
+    fontSize: 1,
   },
   esc: {
-    display: [`none`, `block`]
-  }
+    display: [`none`, `block`],
+  },
 }
