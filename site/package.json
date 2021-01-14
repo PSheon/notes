@@ -11,7 +11,13 @@
   },
   "dependencies": {
     "@elegantstack/gatsby-theme-flexiblog-news": "2.9.0",
+    "dotenv": "^8.2.0",
     "gatsby": "^2.24.11",
+    "gatsby-plugin-algolia": "^0.16.2",
+    "gatsby-plugin-disqus": "^1.2.2",
+    "gatsby-plugin-google-analytics": "^2.9.0",
+    "gatsby-plugin-manifest": "^2.10.0",
+    "gatsby-plugin-sitemap": "^2.10.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1"
   },
