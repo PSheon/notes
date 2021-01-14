@@ -1,22 +1,16 @@
 import React from 'react'
-import { Card } from 'theme-ui'
-import { Stack, Main, Sidebar } from '@layout'
+import { Card as CardComponent } from 'theme-ui'
+import { Stack, Main } from '@layout'
 import CardList from '@components/CardList'
+import Card from '@components/Card'
 import Divider from '@components/Divider'
-import Sticky from '@components/Sticky'
 import Seo from '@widgets/Seo'
-import AuthorCompact from '@widgets/AuthorCompact'
-import {
-  PostHead,
-  PostImage,
-  PostBody,
-  PostComments,
-  PostTagsShare,
-  PostFooter,
-} from '@widgets/Post'
+import AuthorExpanded from '@widgets/AuthorExpanded'
+import NewsletterExpanded from '@widgets/NewsletterExpanded'
+import { PostBody, PostComments, PostTagsShare } from '@widgets/Post'
 
 const Post = ({
-  data: { post, tagCategoryPosts, tagPosts, categoryPosts, previous, next },
+  data: { post, tagCategoryPosts, tagPosts, categoryPosts },
   location,
   ...props
 }) => {
@@ -32,37 +26,43 @@ const Post = ({
       <Seo {...post} siteUrl={siteUrl} />
       <Divider />
       <Stack effectProps={{ effect: 'fadeInDown' }}>
-        <PostHead {...post} />
+        <Main>
+          <Card {...post} variant='horizontal-hero' omitExcerpt />
+        </Main>
       </Stack>
       <Divider />
       <Stack effectProps={{ fraction: 0 }}>
         <Main>
-          <Card variant='paper'>
-            <PostImage {...post} inCard />
+          <CardComponent variant='paper-lg'>
             <PostBody {...post} />
             <PostTagsShare {...post} location={location} />
-            {services.disqus && <PostComments {...post} />}
-            <PostFooter {...{ previous, next }} />
-          </Card>
-        </Main>
-        <Sidebar>
-          <AuthorCompact author={post.author} omitTitle />
+          </CardComponent>
+          <Divider />
+          <AuthorExpanded author={post.author} />
+          {services.disqus && (
+            <>
+              <Divider />
+              <PostComments {...post} />
+            </>
+          )}
           <Divider />
           {post.category && (
-            <Sticky>
-              <CardList
-                title='Related Posts'
-                nodes={relatedPosts}
-                variant='horizontal-aside'
-                limit={6}
-                omitMedia
-                omitCategory
-                distinct
-                aside
-              />
-            </Sticky>
+            <CardList
+              nodes={relatedPosts}
+              variant={['horizontal-md']}
+              columns={[1, 2, 3, 3]}
+              limit={6}
+              title='Related Posts'
+              distinct
+            />
           )}
-        </Sidebar>
+          {services.mailchimp && (
+            <>
+              <Divider />
+              <NewsletterExpanded simple />
+            </>
+          )}
+        </Main>
       </Stack>
     </>
   )

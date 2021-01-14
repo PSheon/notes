@@ -9,30 +9,29 @@ import { HeaderColorMode } from './Header.ColorMode'
 const styles = {
   wrapper: {
     position: `relative`,
-    bg: `headerBg`
   },
   container: {
     position: `relative`,
-    zIndex: 10
+    zIndex: 10,
   },
   logoContainer: {
-    flexBasis: [`full`, `full`, `1/3`]
+    flexBasis: [`full`, `full`, `1/3`],
   },
   searchContainer: {
     flexBasis: [`auto`, `auto`, `1/3`],
     minWidth: `auto`,
     order: [3, 3, `unset`],
-    mx: 3
+    mx: 3,
   },
   menuContainer: {
     flexBasis: [`auto`, `auto`, `1/3`],
     minWidth: `auto`,
-    order: [4, 4, `unset`]
+    order: [4, 4, `unset`],
   },
   colorModeContainer: {
     minWidth: `auto`,
-    order: [2, 2, `unset`]
-  }
+    order: [2, 2, `unset`],
+  },
 }
 
 export const Header = ({ children }) => {
