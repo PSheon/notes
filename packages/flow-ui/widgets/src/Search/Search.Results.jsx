@@ -3,7 +3,7 @@ import groupArray from 'group-array'
 import {
   Highlight,
   Snippet,
-  connectStateResults
+  connectStateResults,
 } from 'react-instantsearch-dom'
 import { Heading, Box, Spinner } from 'theme-ui'
 import Card from '@components/Card'
@@ -19,28 +19,28 @@ const Hits = ({ searchState, searchResults }) => {
   }
 
   if (!searchResults || !searchResults.query) {
-    return 'What are you looking for?'
+    return '在找什麼嗎？'
   }
 
   if (searchResults && searchResults.nbHits < 1) {
-    return `No results for '${searchResults.query}'`
+    return `沒有 '${searchResults.query}' 的相關結果`
   } else {
     const hitsByCategory = groupArray(searchResults.hits, 'category.name')
     const categories = Object.keys(hitsByCategory)
 
-    return categories.map(name => (
+    return categories.map((name) => (
       <Box
         variant='lists.cards.fixed.search'
         sx={styles.hitGroup}
         key={`search-${name}`}
       >
         <Heading variant='h4'>{name}</Heading>
-        {hitsByCategory[name].map(hit => {
+        {hitsByCategory[name].map((hit) => {
           const node = {
             ...hit,
             key: hit.objectID,
             title: <Highlight hit={hit} tagName='mark' attribute='title' />,
-            excerpt: <Snippet hit={hit} tagName='mark' attribute='excerpt' />
+            excerpt: <Snippet hit={hit} tagName='mark' attribute='excerpt' />,
           }
           return (
             <Card
