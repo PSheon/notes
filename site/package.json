@@ -1,7 +1,7 @@
 {
   "name": "psheon-notes",
   "private": true,
-  "version": "2.9.0",
+  "version": "0.1.0",
   "scripts": {
     "develop": "gatsby develop",
     "start": "gatsby develop",
