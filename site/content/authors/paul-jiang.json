@@ -1,0 +1,21 @@
+{
+  "name": "Paul Jiang",
+  "title": "AI 工程師",
+  "description": "TensorFlow Python 愛好者、React 愛好者、積極的利他主義者，最近在忙的是：價值投資、分享經驗、成就團隊",
+  "thumbnail": "paul-jiang.png",
+  "social": [
+    {
+      "name": "Kaggle",
+      "url": "https://www.kaggle.com/psheon"
+    },
+    {
+      "name": "Github",
+      "url": "https://github.com/PSheon"
+    },
+    {
+      "name": "Website",
+      "url": "https://psheon.github.io"
+    }
+  ],
+  "skills": ["Deep Learning", "TensorFlow", "Micro Services", "TypeScript", "React"]
+}
