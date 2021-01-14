@@ -163,7 +163,7 @@ const Posts = ({
             {index !== posts.group.length - 1 && <Divider />}
           </React.Fragment>
         ))}
-      <Divider space={5} />
+      <Divider space={2} />
       <Stack>
         <Main>{services.mailchimp && <NewsletterExpanded />}</Main>
       </Stack>

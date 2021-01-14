@@ -33,7 +33,7 @@ module.exports = {
       options: {
         name: "PSheon's Notes",
         short_name: 'Notes',
-        start_url: '/notes',
+        start_url: '/',
         background_color: '#ffffff',
         theme_color: '#5a67d8',
         display: 'minimal-ui',
