@@ -13,8 +13,9 @@ const styles = {
     textAlign: `center`,
     position: `relative`,
     display: `block`,
-    height: `full`
-  }
+    height: `full`,
+    margin: [`0 0.5rem`, `0`],
+  },
 }
 
 const CardMedia = ({
@@ -44,11 +45,11 @@ const CardMedia = ({
         as: 'a',
         href: link,
         target: '_blank',
-        rel: 'noopener noreferrer'
+        rel: 'noopener noreferrer',
       }
     : {
         as: GLink,
-        to: slug
+        to: slug,
       }
 
   return (
@@ -71,7 +72,7 @@ const CardMedia = ({
 }
 
 CardMedia.defaultProps = {
-  mediaType: 'image'
+  mediaType: 'image',
 }
 
 export default CardMedia
