@@ -4,19 +4,19 @@ import {
   FacebookShareButton,
   TwitterShareButton,
   LinkedinShareButton,
-  EmailShareButton
+  EmailShareButton,
 } from 'react-share'
 import attachSocialIcons from '@helpers/attachSocialIcons'
 
 const styles = {
   wrapper: {
-    alignItems: `center`
+    alignItems: `center`,
   },
   heading: {
     color: `omegaDark`,
     mr: 1,
-    mb: 0
-  }
+    mb: 0,
+  },
 }
 
 const PostShare = ({ location, title }) => {
@@ -50,17 +50,17 @@ const PostShare = ({ location, title }) => {
     facebook: Facebook,
     twitter: Twitter,
     linkedin: Linkedin,
-    email: Email
+    email: Email,
   }
 
   const buttonsWithIcons = attachSocialIcons(
-    Object.keys(buttons).map(s => ({ name: s }))
+    Object.keys(buttons).map((s) => ({ name: s })),
   )
 
   return (
     <Flex sx={styles.wrapper}>
       <Heading variant='h5' sx={styles.heading}>
-        Share
+        分享
       </Heading>
       {buttonsWithIcons.map(({ name, color, Icon }) => {
         const ShareButton = buttons[name]

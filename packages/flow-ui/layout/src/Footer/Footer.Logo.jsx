@@ -8,10 +8,14 @@ const styles = {
     pb: 1,
     mb: 2,
     mt: [4, 0],
+    display: 'flex',
+    justifyContent: [`center`, `unset`],
   },
   copyright: {
     pt: 2,
     mb: [2, 4],
+    display: 'flex',
+    justifyContent: [`center`, `unset`],
   },
 }
 
