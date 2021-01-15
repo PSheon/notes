@@ -22,10 +22,10 @@ export default () => {
       <Stack>
         <Main>
           {authors.map((author) => (
-            <>
+            <div key={author.id}>
               <Divider />
               <AuthorExpanded author={author} withLink />
-            </>
+            </div>
           ))}
         </Main>
       </Stack>

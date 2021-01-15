@@ -16,7 +16,6 @@ const styles = {
 
 export default () => (
   <Heading variant='h2' sx={styles.heading}>
-    {/* Get Inspired to Achieve */}
     <Typewriter
       options={{
         autoStart: true,
