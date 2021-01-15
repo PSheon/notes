@@ -9,13 +9,13 @@ const styles = {
     color: `heading`,
     fontWeight: `medium`,
     ':visited': {
-      color: `heading`
+      color: `heading`,
     },
     svg: {
       height: 24,
-      ml: 2
-    }
-  }
+      ml: 2,
+    },
+  },
 }
 
 const PoweredByGatsby = () => (
@@ -27,8 +27,7 @@ const PoweredByGatsby = () => (
     rel='noopener'
     sx={styles.link}
   >
-    Powered By
-    {gatsbySVG && <SVG src={gatsbySVG} />}
+    使用 React x {gatsbySVG && <SVG src={gatsbySVG} />}
   </Link>
 )
 

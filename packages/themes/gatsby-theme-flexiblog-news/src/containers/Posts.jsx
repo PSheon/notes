@@ -19,12 +19,12 @@ const Posts = ({
 
   return (
     <>
-      <Seo title='Home' />
+      <Seo title='首頁' />
       <Hero
         pt={2}
         pb={5}
         sx={{
-          background: t =>
+          background: (t) =>
             `linear-gradient(
               0deg,
               ${t.colors.omegaLighter},
@@ -74,7 +74,7 @@ const Posts = ({
           limit={3}
           columns={[1, 2, 3]}
           variant={['horizontal-md', 'vertical-cover']}
-          title="Editor's Pick This Week"
+          title='本週精選'
           omitCategory
         />
       </Stack>

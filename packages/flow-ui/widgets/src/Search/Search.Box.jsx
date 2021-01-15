@@ -17,10 +17,10 @@ const SearchBox = ({
   const debouncedSearchTerm = useDebounce(searchTerm, 500)
 
   const searchCharacters = useCallback(
-    searchTerm => {
+    (searchTerm) => {
       refine(searchTerm)
     },
-    [refine]
+    [refine],
   )
 
   // Effect for API call
@@ -30,7 +30,7 @@ const SearchBox = ({
     }
   }, [debouncedSearchTerm, searchCharacters])
 
-  const handleEsc = e => {
+  const handleEsc = (e) => {
     //close on esc keypress
     if (e.keyCode === 27) {
       e.currentTarget.blur()
@@ -49,17 +49,17 @@ const SearchBox = ({
       </IconButton>
       <Box
         sx={styles.form({
-          focus
+          focus,
         })}
       >
         <FaSearch style={styles.searchIcon} />
         <Input
           sx={styles.input}
           type='text'
-          placeholder='Discover news, articles and more...'
+          placeholder='探索新事物、尋找舊文章或更多...'
           aria-label='Search'
           onFocus={handleFocus}
-          onChange={e => setSearchTerm(e.target.value)}
+          onChange={(e) => setSearchTerm(e.target.value)}
           onKeyDown={handleEsc}
           {...rest}
         />

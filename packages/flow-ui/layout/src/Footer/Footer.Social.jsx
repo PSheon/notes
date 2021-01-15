@@ -6,11 +6,11 @@ import attachSocialIcons from '@helpers/attachSocialIcons'
 
 const styles = {
   social: {
-    mb: [3, 0]
+    mb: [3, 0],
   },
   navHeader: {
-    display: [`none`, `block`]
-  }
+    display: [`none`, `block`],
+  },
 }
 
 export const FooterSocial = () => {
@@ -19,7 +19,7 @@ export const FooterSocial = () => {
   return (
     <>
       <Heading variant='h4' as='p' sx={styles.navHeader}>
-        Social Media
+        社交媒體
       </Heading>
       <Navigation
         items={attachSocialIcons(social)}

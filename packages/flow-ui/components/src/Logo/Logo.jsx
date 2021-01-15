@@ -6,16 +6,16 @@ import { Heading } from 'theme-ui'
 
 const styles = {
   image: {
-    verticalAlign: `middle`
+    verticalAlign: `middle`,
   },
   grayscale: {
     WebkitFilter: `grayscale(1)`,
     filter: `grayscale(1)`,
-    opacity: `0.7`
+    opacity: `0.7`,
   },
   title: {
-    m: 0
-  }
+    m: 0,
+  },
 }
 
 const Logo = ({ title, grayscale, fixed, to, ...props }) => (
@@ -48,12 +48,12 @@ const Logo = ({ title, grayscale, fixed, to, ...props }) => (
 export default Logo
 
 Logo.defaultProps = {
-  to: '/'
+  to: '/',
 }
 
 Logo.propTypes = {
   title: PropTypes.string,
   grayscale: PropTypes.bool,
   fixed: PropTypes.object, //gatsby-transform-sharp
-  to: PropTypes.string
+  to: PropTypes.string,
 }

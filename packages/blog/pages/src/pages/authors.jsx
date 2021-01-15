@@ -11,21 +11,21 @@ export default () => {
 
   return (
     <>
-      <Seo title='Our Team' />
+      <Seo title='關於文章作者' />
       <Divider />
       <Stack effectProps={{ effect: 'fadeInDown' }}>
         <PageTitle
-          header='Team Members'
-          subheader='FlexiBlog theme comes with a pre-made contact form component. You can integrate this form with serverless services such as Formspree, Getform, FormKeep and others to receive form submissions via email.'
+          header='文章作者'
+          subheader='我們是一群熱愛分享知識、富有冒險精神的人.'
         />
       </Stack>
       <Stack>
         <Main>
           {authors.map((author) => (
-            <>
+            <div key={author.id}>
               <Divider />
               <AuthorExpanded author={author} withLink />
-            </>
+            </div>
           ))}
         </Main>
       </Stack>

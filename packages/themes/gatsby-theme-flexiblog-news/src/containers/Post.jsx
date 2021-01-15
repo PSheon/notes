@@ -52,7 +52,7 @@ const Post = ({
               variant={['horizontal-md']}
               columns={[1, 2, 3, 3]}
               limit={6}
-              title='Related Posts'
+              title='相關文章'
               distinct
             />
           )}

@@ -6,14 +6,14 @@ import useSiteMetadata from '@helpers/useSiteMetadata'
 
 const styles = {
   desktopMenu: {
-    display: [`none`, `none`, `block`]
+    display: [`none`, `none`, `block`],
   },
   mobileMenu: {
-    display: [`block`, `block`, `none`]
+    display: [`block`, `block`, `none`],
   },
   desktopMenuWrapper: {
-    justifyContent: 'flex-end'
-  }
+    justifyContent: 'flex-end',
+  },
 }
 
 export const HeaderMenu = ({ locationState, mobileMenu = {} }) => {
@@ -34,10 +34,10 @@ export const HeaderMenu = ({ locationState, mobileMenu = {} }) => {
         headingProps={{ variant: 'h3' }}
         items={[
           {
-            title: 'Main Menu',
-            items: headerMenu
+            title: '網站目錄',
+            items: headerMenu,
           },
-          mobileMenu
+          mobileMenu,
         ]}
       />
     </Drawer>
