@@ -9,15 +9,13 @@ import Commitment from '@widgets/Commitment'
 
 export default () => (
   <>
-    <Seo title='Contact' />
+    <Seo title='聯繫我們' />
     <Divider />
     <Stack>
       <Main>
         <PageTitle
-          header="Let's Connect"
-          subheader='FlexiBlog theme comes with a pre-made contact form component.
-					You can integrate this form with serverless services such as Formspree, Getform,
-					FormKeep and others to receive form submissions via email.'
+          header='聯繫我們吧'
+          subheader='有任何建議、提醒或者通知都可以透過電子郵件聯繫我們喔！.'
         />
         <Divider />
         <ContactForm />

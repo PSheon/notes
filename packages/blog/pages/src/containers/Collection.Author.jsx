@@ -12,7 +12,10 @@ const Collection = ({ data: { posts, collectionInfo } }) => (
     <Seo title={collectionInfo.name} />
     <Divider />
     <Stack effectProps={{ effect: 'fadeInDown' }}>
-      <PageTitle header='Published by Author' totalCount={posts.totalCount} />
+      <PageTitle
+        header={`由${collectionInfo.name}撰寫的文章`}
+        totalCount={posts.totalCount}
+      />
     </Stack>
     <Divider />
     <Stack>

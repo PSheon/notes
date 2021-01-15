@@ -9,19 +9,19 @@ import Seo from '@widgets/Seo'
 
 export default () => (
   <>
-    <Seo title='Page Not Found' />
+    <Seo title='頁面不存在' />
     <Divider />
     <Stack>
       <Main>
         <Section>
           <PageTitle
-            header="Sorry, this page isn't available."
-            subheader='You may have mistyped the address or the page may have moved.'
+            header='歐喔，這個頁面不存在.'
+            subheader='您可能輸入了錯誤的網址或頁面已經搬家囉.'
           />
         </Section>
         <Section>
           <Button variant='primary' as={Link} to='/'>
-            Go to homepage
+            回到首頁
           </Button>
         </Section>
       </Main>

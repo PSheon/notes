@@ -26,12 +26,10 @@ const styles = {
 export default () => (
   <Box sx={styles.box}>
     <Heading variant='h3' sx={styles.quote}>
-      “古人學問無遺力，少壯工夫老始成”
-      <br />
-      “紙上得來終覺淺，絕知此事要躬行”
+      “to empower every person and organization on the planet to achieve more”
     </Heading>
     <Heading variant='h4' sx={styles.writer}>
-      陸游 《冬夜讀書示子聿》
+      Satya Nadella 《微軟執行長》
     </Heading>
   </Box>
 )

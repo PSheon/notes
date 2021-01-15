@@ -9,7 +9,7 @@ const CardFooterInfo = ({ variant, date, timeToRead }) => (
     {date && <Text sx={{ variant: rv(variant, 'date') }}>{date}</Text>}
     {timeToRead && (
       <Text sx={{ variant: rv(variant, 'timeToRead') }}>
-        <FaRegClock css={{ verticalAlign: `middle` }} /> {timeToRead} min
+        <FaRegClock css={{ verticalAlign: `middle` }} /> {timeToRead} 分鐘
       </Text>
     )}
   </TextList>

@@ -19,8 +19,9 @@ export default {
     maxWidth: [360, `none`],
     flexBasis: `1/3`,
     position: `relative`,
-    m: 0,
+    mt: 2,
     ml: [null, 0, 5],
+    mb: [5, 0],
     mx: 2,
     '&::before, &::after': {
       content: `""`,
@@ -32,19 +33,22 @@ export default {
       top: -2,
       left: -2,
       size: `2/3`,
+      borderRadius: `3rem 0`,
     },
     '::after': {
       bottom: -2,
       right: -2,
       size: 80,
-      borderRadius: [`0`, `3rem 0`],
+      // borderRadius: [`0`, `3rem 0`],
+      borderRadius: `3rem 0`,
     },
   },
   image: {
-    borderRadius: (t) => [
-      `${t.radii.default} 3rem 0 0`,
-      `${t.radii.default} 3rem 3rem`,
-    ],
+    // borderRadius: (t) => [
+    //   `${t.radii.default} 3rem 0 0`,
+    //   `${t.radii.default} 3rem 3rem`,
+    // ],
+    borderRadius: (t) => `3rem`,
     maxHeight: `none`,
     zIndex: 2,
     img: {

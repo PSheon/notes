@@ -6,7 +6,7 @@ import Divider from '@components/Divider'
 const styles = {
   wrapper: {
     justifyContent: `space-between`,
-    alignItems: `end`
+    alignItems: `end`,
   },
   //Section title
   section: {
@@ -23,25 +23,25 @@ const styles = {
       height: `full`,
       width: 5,
       top: 0,
-      left: 0
-    }
+      left: 0,
+    },
   },
   //Section aside title
   'section-aside': {
     color: `omegaDark`,
     mx: `auto`,
-    mb: 0
+    mb: 0,
   },
   badge: {
     display: [`none`, `block`],
-    mb: 0
-  }
+    mb: 0,
+  },
 }
 
 const SectionTitle = ({ title, titleLink, omitTitle, variant }) => {
   const linkProps = titleLink && {
     as: Link,
-    to: titleLink
+    to: titleLink,
   }
 
   return !omitTitle && (title || titleLink) ? (
@@ -54,7 +54,7 @@ const SectionTitle = ({ title, titleLink, omitTitle, variant }) => {
         )}
         {titleLink && (
           <Badge variant='tag' sx={styles.badge} {...linkProps}>
-            View More
+            更多文章
           </Badge>
         )}
       </Flex>

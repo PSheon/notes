@@ -16,13 +16,13 @@ const styles = {
     a: {
       flex: 1,
       minWidth: [`1/3`, `auto`],
-      m: [3, 2]
-    }
-  }
+      m: [3, 2],
+    },
+  },
 }
 
 const Categories = ({ variant, categories, ...props }) => (
-  <Section aside={variant === 'vertical'} title='Topics' {...props}>
+  <Section aside={variant === 'vertical'} title='文章主題' {...props}>
     <Box sx={styles[variant]}>
       {categories &&
         categories.map(({ id, name, slug, totalCount, icon }) => {
@@ -33,7 +33,7 @@ const Categories = ({ variant, categories, ...props }) => (
             to: slug,
             iconPath: icon,
             Icon: !icon && FaArchive,
-            variant
+            variant,
           }
 
           return totalCount !== 0 && <IconButton {...buttonProps} />
@@ -45,5 +45,5 @@ const Categories = ({ variant, categories, ...props }) => (
 export default Categories
 
 Categories.defaultProps = {
-  variant: 'vertical'
+  variant: 'vertical',
 }

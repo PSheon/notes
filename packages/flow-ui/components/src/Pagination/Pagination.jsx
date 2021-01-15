@@ -16,17 +16,17 @@ const styles = {
     bg: `contentBg`,
     maxWidth: [`none`, 500],
     mx: `auto`,
-    p: 1
+    p: 1,
   },
   item: {
-    width: `1/3`
+    width: `1/3`,
   },
   number: {
-    py: 2
+    py: 2,
   },
   button: {
-    minWidth: `full`
-  }
+    minWidth: `full`,
+  },
 }
 
 const Pagination = ({
@@ -35,7 +35,7 @@ const Pagination = ({
   hasPreviousPage,
   hasNextPage,
   basePath = '',
-  slug = ''
+  slug = '',
 }) => {
   if (!hasNextPage && !hasPreviousPage) return ''
   let prefixPath = normalizeSlug(basePath + slug)
@@ -51,17 +51,17 @@ const Pagination = ({
         {hasPreviousPage && (
           <Button variant='mute' as={Link} to={prevLink} sx={styles.button}>
             <FaChevronLeft />
-            Previous
+            上一頁
           </Button>
         )}
       </Box>
       <Box sx={{ ...styles.item, ...styles.number }}>
-        Page <strong>{currentPage}</strong> of <strong>{pageCount}</strong>
+        第 <strong>{currentPage}</strong> / <strong>{pageCount}</strong> 頁
       </Box>
       <Box sx={styles.item}>
         {hasNextPage && (
           <Button variant='dark' as={Link} to={nextLink} sx={styles.button}>
-            Next
+            下一頁
             <FaChevronRight />
           </Button>
         )}
@@ -78,5 +78,5 @@ Pagination.propTypes = {
   hasPreviousPage: PropTypes.bool,
   hasNextPage: PropTypes.bool,
   slug: PropTypes.string,
-  pagingParam: PropTypes.string
+  pagingParam: PropTypes.string,
 }

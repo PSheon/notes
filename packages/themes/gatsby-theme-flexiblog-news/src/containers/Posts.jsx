@@ -19,12 +19,12 @@ const Posts = ({
 
   return (
     <>
-      <Seo title='Home' />
+      <Seo title='首頁' />
       <Hero
         pt={2}
         pb={5}
         sx={{
-          background: t =>
+          background: (t) =>
             `linear-gradient(
               0deg,
               ${t.colors.omegaLighter},

@@ -100,10 +100,6 @@ module.exports = {
             slug: '/contact',
           },
           {
-            name: '關於我們',
-            slug: '/about',
-          },
-          {
             name: '網站地圖',
             slug: '/about',
           },
