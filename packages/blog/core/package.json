@@ -16,6 +16,7 @@
     "gatsby-plugin-catch-links": "^2.6.0",
     "gatsby-plugin-mdx": "^1.6.0",
     "gatsby-plugin-sharp": "^2.10.0",
+    "gatsby-remark-audio": "^1.0.2",
     "gatsby-remark-copy-linked-files": "^2.6.0",
     "gatsby-remark-embed-video": "^3.0.10",
     "gatsby-remark-images": "^3.7.0",

@@ -1,6 +1,7 @@
 {
-  "name": "News",
+  "name": "科技新聞",
   "icon": "news.svg",
   "color": "#e9d8fd",
-  "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore."
+  "slug": "news",
+  "description": "蒐集與科技相關最新資訊，紀錄多元、專業、平衡的分析報導"
 }

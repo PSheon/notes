@@ -1,26 +1,26 @@
 const withDefaults = require('./src/utils/default.options')
 
-module.exports = options => {
+module.exports = (options) => {
   options = withDefaults(options)
 
   const isLocalSourceEnabled = options.sources.find(
-    source => source.sourceInstanceName && source.enabled
+    (source) => source.sourceInstanceName && source.enabled,
   )
-  const mdxSource = options.sources.find(source => source.name == 'mdx')
+  const mdxSource = options.sources.find((source) => source.name == 'mdx')
   const mdxExtensions = mdxSource && mdxSource.extensions
 
   const plugins = [
     {
       resolve: '@elegantstack/gatsby-plugin-proxy-schema',
-      options
+      options,
     },
     {
       resolve: '@elegantstack/gatsby-plugin-utility-directives',
-      options
+      options,
     },
     {
       resolve: '@elegantstack/gatsby-plugin-mkdir',
-      options
+      options,
     },
     {
       resolve: '@elegantstack/gatsby-plugin-alias-imports',
@@ -30,10 +30,10 @@ module.exports = options => {
           '@components': '@elegantstack/flow-ui-components/src',
           '@widgets': '@elegantstack/flow-ui-widgets/src',
           '@helpers': '@elegantstack/helpers/src',
-          '@helpers-blog': '@elegantstack/helpers-blog/src'
+          '@helpers-blog': '@elegantstack/helpers-blog/src',
         },
-        extensions: ['js', 'jsx']
-      }
+        extensions: ['js', 'jsx'],
+      },
     },
     {
       resolve: 'gatsby-plugin-mdx',
@@ -47,52 +47,62 @@ module.exports = options => {
               quality: 85,
               showCaptions: true,
               linkImagesToOriginal: false,
-              disableBgImageOnAlpha: true
-            }
+              disableBgImageOnAlpha: true,
+            },
+          },
+          {
+            resolve: 'gatsby-remark-audio',
+            options: {
+              preload: 'auto',
+              loop: false,
+              controls: true,
+              muted: false,
+              autoplay: false,
+            },
           },
           {
             resolve: 'gatsby-remark-embed-video',
             options: {
-              width: 800
-            }
+              width: 800,
+            },
           },
           { resolve: 'gatsby-remark-responsive-iframe' },
           { resolve: 'gatsby-remark-copy-linked-files' },
-          { resolve: 'gatsby-remark-smartypants' }
+          { resolve: 'gatsby-remark-smartypants' },
         ],
-        remarkPlugins: [require('remark-slug')]
-      }
+        remarkPlugins: [require('remark-slug')],
+      },
     },
     'gatsby-plugin-catch-links',
     'gatsby-transformer-sharp',
     {
       resolve: 'gatsby-plugin-sharp',
       options: {
-        defaultQuality: 85
-      }
-    }
+        defaultQuality: 85,
+      },
+    },
   ].filter(Boolean)
 
   // Resolve local paths
   if (isLocalSourceEnabled) {
     plugins.push('gatsby-transformer-json')
-    options.localPaths.forEach(localPath =>
+    options.localPaths.forEach((localPath) =>
       plugins.push({
         resolve: 'gatsby-source-filesystem',
-        options: localPath
-      })
+        options: localPath,
+      }),
     )
   }
 
   // Resolve static paths (ie. assets)
-  options.staticPaths.forEach(localPath =>
+  options.staticPaths.forEach((localPath) =>
     plugins.push({
       resolve: 'gatsby-source-filesystem',
-      options: localPath
-    })
+      options: localPath,
+    }),
   )
 
   return {
-    plugins
+    plugins,
   }
 }
