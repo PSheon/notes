@@ -35,9 +35,9 @@ export default () => (
           .pauseFor(1300)
           .deleteChars(4)
           .typeString(
-            '，最終<strong>將你腦海中的知識<span style="color: #E5464F;">轉換成財富！</span></strong>',
+            '，最終<strong>將你腦海中的知識<span style="color: #F3C70D;">轉換成財富$$！</span></strong>',
           )
-          .pauseFor(1000)
+          .pauseFor(3000)
           .start()
       }}
     />

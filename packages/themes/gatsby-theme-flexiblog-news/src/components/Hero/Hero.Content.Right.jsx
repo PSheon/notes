@@ -26,6 +26,8 @@ const styles = {
 export default () => (
   <Box sx={styles.box}>
     <Heading variant='h3' sx={styles.quote}>
+      “古人學問無遺力，少壯工夫老始成”
+      <br />
       “紙上得來終覺淺，絕知此事要躬行”
     </Heading>
     <Heading variant='h4' sx={styles.writer}>
