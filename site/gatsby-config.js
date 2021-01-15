@@ -56,9 +56,8 @@ module.exports = {
       },
     },
   ],
-  // Customize your site metadata:
   siteMetadata: {
-    //General Site Metadata
+    /* General Site Metadata */
     siteUrl: 'https://psheon.github.io/notes',
     title: "PSheon's Notes",
     name: 'notes',
@@ -67,7 +66,7 @@ module.exports = {
     email: 'pauljiang61020@gmail.com',
     phone: '+(886) 98888-8888',
 
-    //Site Social Media Links
+    /* Site Social Media Links */
     social: [
       {
         name: 'Github',
@@ -83,50 +82,42 @@ module.exports = {
       },
     ],
 
-    //Header Menu Items
+    /* Header Menu Items */
     headerMenu: [
       {
-        name: 'Our Team',
+        name: '文章作者',
         slug: '/authors',
-      },
-      {
-        name: 'Contact',
-        slug: '/contact',
       },
     ],
 
-    //Footer Menu Items (2 Sets)
+    /* Footer Menu Items (2 Sets) */
     footerMenu: [
       {
-        title: 'Quick Links',
+        title: '關於我們',
         items: [
           {
-            name: 'Advertise with us',
+            name: '聯繫我們',
             slug: '/contact',
           },
           {
-            name: 'About Us',
+            name: '關於我們',
             slug: '/about',
           },
           {
-            name: 'Contact Us',
-            slug: '/contact',
+            name: '網站地圖',
+            slug: '/about',
           },
         ],
       },
       {
-        title: 'Legal Stuff',
+        title: '價值理念',
         items: [
           {
-            name: 'Privacy Notice',
+            name: '隱私權政策',
             slug: '/',
           },
           {
-            name: 'Cookie Policy',
-            slug: '/',
-          },
-          {
-            name: 'Terms Of Use',
+            name: '使用條款',
             slug: '/',
           },
         ],
